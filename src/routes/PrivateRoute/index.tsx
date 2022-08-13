@@ -6,7 +6,7 @@ interface RoutesExternalProps{
 }
 
 const PrivateRoute = ({ component }: RoutesExternalProps): JSX.Element => {
-  const auth = false // your logic
+  const auth = true // your logic
 
   return auth ? component : <Navigate to="/register" />
 }

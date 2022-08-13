@@ -1,8 +1,9 @@
+import { ListDogPage } from '../../styles/ListDog'
 
 export function ListDogs (): JSX.Element {
   return (
-    <>
-      <h1>ListDogs</h1>
-    </>
+    <ListDogPage>
+      <p>a</p>
+    </ListDogPage>
   )
 }
