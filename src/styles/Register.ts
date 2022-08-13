@@ -2,23 +2,23 @@ import styled from 'styled-components'
 
 export const RegisterPage = styled.div`
 
-width: 100%;
-height: 100%;
-display: flex;
-justify-content: flex-start;
-align-items: center;
-background-image: url("dogs.jpg");
-height: 100%; 
-background-position: center; 
-background-repeat: no-repeat;
-background-size: cover; 
-flex-direction: column;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url("dogs.jpg");
+  height: 100%; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover; 
+  flex-direction: column;
 .hero{
   width: 100%;
-height: 100%;
-background-color: black;
-opacity: 15%;
-z-index: 1;
+  height: 100%;
+  background-color: black;
+  opacity: 15%;
+  z-index: 1;
 }
 
 `
@@ -35,6 +35,23 @@ export const Frame = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  h4{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    margin-bottom: 5%;
+    line-height: 14px;
+
+    letter-spacing: 0.968915px;
+
+    color: #354446;
+
+  }
+  img {
+    width: 30%;
+    height: 20%;
+  }
   input{
     width: 50%;
     max-width: 33%;
@@ -50,7 +67,6 @@ export const Frame = styled.div`
     max-width: 33%;
     height: 5%;
     background: #354545;
-    border-radius: 0.961465px;
     color: white;
     margin-top: 2%;
   }
