@@ -10,7 +10,6 @@ const RoutesRouter = (): JSX.Element => {
   return (
     <BrowserRouter>
       <ContextGlobalProvider>
-
         <Routes>
           <Route path="/register" element={<Registro />} />
           <Route path="/" element={<PrivateRoute component={<Menu />} />} />
@@ -18,7 +17,6 @@ const RoutesRouter = (): JSX.Element => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </ContextGlobalProvider>
-
     </BrowserRouter>
   )
 }
