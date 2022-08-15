@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { ListDogPage } from '../../styles/ListDog'
+import { NavBar } from '../../components/NavBar'
+import { Box, ContainerImgs, ListDogPage } from '../../styles/ListDog'
 
 export function ListDogs (): JSX.Element {
   interface dataI {
@@ -169,7 +170,10 @@ export function ListDogs (): JSX.Element {
   })
   return (
     <ListDogPage>
-      { data.list.map((e: any) => (<img src={e} />)) }
+      <NavBar />
+      <ContainerImgs>
+      { data.list.map((e: any) => (<Box src={e} />)) }
+      </ContainerImgs>
     </ListDogPage>
   )
 }

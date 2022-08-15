@@ -5,21 +5,24 @@ width: 100%;
 height: 100%;
 display: flex;
 justify-content: center;
+flex-direction: column;
 `
 
 export const Button = styled.div`
 
-width: 40%;
+width: 39%;
 height: 40%;
 background-color: black;
-margin: 1%;
+margin: 2%;
 display: flex;
 align-items: center;
 justify-content: center;
 cursor: pointer;
 border-radius: 5px;
 &:hover {
-  background-color: antiquewhite;
+  transform: scale(1.1);
+background-color: antiquewhite;
+
 }
 `
 

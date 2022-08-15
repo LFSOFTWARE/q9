@@ -1,21 +1,17 @@
-import { BoxButtons, Button, Dog, MenuPage } from '../../styles/Menu'
+import { ButtonMenu } from '../../components/ButtonMenu'
+import { NavBar } from '../../components/NavBar'
+import { BoxButtons, MenuPage } from '../../styles/Menu'
 
 export function Menu (): JSX.Element {
   return (
     <MenuPage>
+      <NavBar />
       <BoxButtons>
-        <Button>
-          <Dog src='pug.png'/>
-        </Button>
-        <Button>
-          <Dog src='golden.png'/>
-        </Button>
-        <Button>
-          <Dog src='husky.png'/>
-        </Button>
-        <Button>
-          <Dog src='chihua.png'/>
-        </Button>
+        <ButtonMenu src='pug.png' />
+        <ButtonMenu src='golden.png' />
+        <ButtonMenu src='husky.png' />
+        <ButtonMenu src='chihua.png' />
+
       </BoxButtons>
 
     </MenuPage>
