@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useMemo } from 'react'
+import { useContext, useMemo } from 'react'
 import { Navigate } from 'react-router-dom'
 import { ContextGlobal } from '../../context/contexGlobal'
 
@@ -9,16 +9,11 @@ interface RoutesExternalProps{
 const PrivateRoute = ({ component }: RoutesExternalProps): JSX.Element => {
   const { jwt } = useContext(ContextGlobal)
   const auth = useMemo(() => {
-    console.log(jwt)
     if (jwt !== null) {
       return true
     }
     return false
   }, [jwt])
-
-  useEffect(() => {
-    console.log(auth)
-  }, [auth])
 
   return auth ? component : <Navigate to="/register" />
 }

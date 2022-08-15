@@ -6,10 +6,12 @@ interface ProviderProp {
 }
 
 export const ContextGlobalProvider: React.FC<ProviderProp> = ({ children }) => {
-  const [jwt, setJwt] = useState(null)
+  const [jwt, setJwt] = useState<any>()
+
+  const jwtStore = localStorage.getItem('jwt')
   useEffect(() => {
-    console.log(jwt)
-  }, [jwt])
+    setJwt(jwtStore)
+  }, [jwtStore])
   return (
     <ContextGlobal.Provider
       value={{
