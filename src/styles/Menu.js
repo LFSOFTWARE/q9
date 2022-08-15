@@ -12,7 +12,7 @@ export const Button = styled.div`
 
 width: 39%;
 height: 40%;
-background-color: black;
+background-color: #0b66af;
 margin: 2%;
 display: flex;
 align-items: center;

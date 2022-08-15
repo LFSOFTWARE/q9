@@ -8,9 +8,9 @@ export function Menu (): JSX.Element {
       <NavBar />
       <BoxButtons>
         <ButtonMenu src='pug.png' />
-        <ButtonMenu src='golden.png' />
+        <ButtonMenu src='labrador.png' />
         <ButtonMenu src='husky.png' />
-        <ButtonMenu src='chihua.png' />
+        <ButtonMenu src='chihuahua.png' />
 
       </BoxButtons>
 

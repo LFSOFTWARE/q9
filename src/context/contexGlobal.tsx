@@ -7,6 +7,7 @@ interface ProviderProp {
 
 export const ContextGlobalProvider: React.FC<ProviderProp> = ({ children }) => {
   const [jwt, setJwt] = useState<any>()
+  const [breedSearch, setBreedSearch] = useState<string>('')
 
   const jwtStore = localStorage.getItem('jwt')
   useEffect(() => {
@@ -16,7 +17,9 @@ export const ContextGlobalProvider: React.FC<ProviderProp> = ({ children }) => {
     <ContextGlobal.Provider
       value={{
         jwt,
-        setJwt
+        setJwt,
+        breedSearch,
+        setBreedSearch
       }}
     >
       {children}

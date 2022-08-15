@@ -1,9 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import { NavBar } from '../../components/NavBar'
 import { Box, ContainerImgs, ListDogPage } from '../../styles/ListDog'
 import Service from '../../services/service'
-
+import { ContextGlobal } from '../../context/contexGlobal'
 export function ListDogs (): JSX.Element {
+  const { breedSearch } = useContext(ContextGlobal)
+  const [load, setLaod] = useState(true)
+
   interface dataI {
     breed: string
     list: string[]
@@ -16,8 +19,10 @@ export function ListDogs (): JSX.Element {
   })
   const handleBreed = async (): Promise<any> => {
     try {
-      const { data } = await getDogs('husky')
+      console.log(breedSearch)
+      const { data } = await getDogs(breedSearch)
       setData(data)
+      setLaod(false)
     } catch (error) {
 
     }
@@ -25,13 +30,18 @@ export function ListDogs (): JSX.Element {
 
   useEffect(() => {
     void handleBreed()
-  }, [])
+  }, [breedSearch])
   return (
     <ListDogPage>
       <NavBar />
-      <ContainerImgs>
-      { data.list?.map((e: any) => (<Box key={e} src={e} />)) }
-      </ContainerImgs>
+      {load && (
+        <img className='load' src="/load.gif" alt="gif" />
+      )}
+      {!load && (
+        <ContainerImgs>
+        { data.list?.map((e: any) => (<Box key={e} src={e} />)) }
+        </ContainerImgs>
+      )}
     </ListDogPage>
   )
 }
