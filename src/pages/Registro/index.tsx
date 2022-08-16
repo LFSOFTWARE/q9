@@ -39,7 +39,7 @@ export function Registro (): JSX.Element {
       <Frame color="fff">
         <img src="dog.gif" alt="cachorro" />
         <h4>Faça o Registro</h4>
-        <input onChange={(e) => setEmail(e.target.value)} value={email} placeholder='Email' type="text" />
+        <input onChange={(e) => setEmail(e.target.value)} value={email} placeholder='Email' type="text" id='email'/>
         <button onClick={Register} type='button' >Entrar</button>
       </Frame>
     </RegisterPage>
