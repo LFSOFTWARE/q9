@@ -2,9 +2,9 @@ Olá, esta aplicação é feita em react + typescript e consome uma api de fotos
 
 para rodar a aplicação siga os passos:
 
-1 - clone o repositório
-2 - npm install
-3 - npm start
+1 - clone o repositório<br/>
+2 - npm install<br/>
+3 - npm start<br/>
 
 
 Faça o registro
