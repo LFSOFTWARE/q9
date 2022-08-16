@@ -17,7 +17,8 @@ export function Registro (): JSX.Element {
   }
   const Register = async (): Promise<any> => {
     try {
-      if (email !== null && email !== '') {
+      const tryEmail = email.split('@')
+      if (email !== null && email !== '' && tryEmail.length > 1) {
         const { data } = await getToken({ email })
         setJwt(data?.user.token)
         localStorage.setItem('jwt', data?.user.token)

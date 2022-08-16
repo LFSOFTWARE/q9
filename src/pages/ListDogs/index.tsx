@@ -3,6 +3,7 @@ import { NavBar } from '../../components/NavBar'
 import { Box, ContainerImgs, ListDogPage } from '../../styles/ListDog'
 import Service from '../../services/service'
 import { ContextGlobal } from '../../context/contexGlobal'
+
 export function ListDogs (): JSX.Element {
   const { breedSearch } = useContext(ContextGlobal)
   const [load, setLaod] = useState(true)
@@ -19,7 +20,6 @@ export function ListDogs (): JSX.Element {
   })
   const handleBreed = async (): Promise<any> => {
     try {
-      console.log(breedSearch)
       const { data } = await getDogs(breedSearch)
       setData(data)
       setLaod(false)

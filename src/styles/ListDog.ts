@@ -38,6 +38,11 @@ export const Box = styled.div<boxI>`
   background-size: cover; 
   flex-direction: column;
   margin: 1% 1%;
+
+  @media only screen and (max-width: 600px)  {
+  width: 40%;
+
+  }
   &:hover {
   transform: scale(2);
   cursor: pointer;

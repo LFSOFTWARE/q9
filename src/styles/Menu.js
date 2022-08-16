@@ -19,6 +19,10 @@ align-items: center;
 justify-content: center;
 cursor: pointer;
 border-radius: 5px;
+@media only screen and (max-width: 600px)  {
+  width: 90%;
+
+  }
 &:hover {
   transform: scale(1.1);
 background-color: antiquewhite;
@@ -38,4 +42,8 @@ flex-wrap: wrap;
 
 export const Dog = styled.img`
 width: 20%;
+@media only screen and (max-width: 600px)  {
+  width: 40%;
+
+  }
 `

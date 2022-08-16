@@ -53,21 +53,47 @@ export const Frame = styled.div`
     height: 20%;
   }
   input{
-    width: 50%;
-    max-width: 33%;
+    width: 60%;
+    max-width: 40%;
     height: 5%;
     background: #F5F5F5;
     border: 0;
     border-bottom: 1px solid gray;
     padding: 0 5px;
+
+   
   }
 
   button{
-    width: 50%;
-    max-width: 33%;
+    width: 60%;
+    max-width: 40%;
     height: 5%;
     background: #354545;
     color: white;
     margin-top: 2%;
+    &:hover{
+      background-color: #4a7272;
+      cursor: pointer;
+    }
+  }
+
+  @media only screen and (max-width: 600px)  {
+  width: 100%;
+  input{
+    width: 90%;
+    max-width: 90%;
+   
+  }
+
+  button{
+    width: 90%;
+    max-width: 90%;
+    margin-bottom: 30%;
+  }
+
+  img {
+    width: 95%;
+    height: 20%;
+  }
   }
 `
